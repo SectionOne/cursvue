@@ -9,6 +9,7 @@ const app = createApp({
         <p>Es de la mascareta {{ true }}</p>
         <p>Pisos {{ [1, 2, 3] }}</p>
         <p>Usuario {{ { id: 1, name: 'Marc' } }}</p>
+        <p>Ets major d'edat? {{ 23 > 18 }}</p>
     `	
 })
 
