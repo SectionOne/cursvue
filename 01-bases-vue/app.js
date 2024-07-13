@@ -7,6 +7,8 @@ const app = createApp({
     `,	
     setup(){
         const message = "Hola Món"; //L'element queda per defecte protegit
+
+        return { message };
     }
 });
 
