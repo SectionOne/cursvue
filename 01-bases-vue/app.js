@@ -2,15 +2,12 @@ const { createApp,ref } = Vue;
 
 const app = createApp({
     template: `	
-        <h1>Hola Món</h1>
+        <h1>{{message}}</h1>
         <p>Desde app.js</p>
-        <p>{{ 1 + 1}}</p>
-        <p>{{ "1" + "1"}}</p>
-        <p>Es de la mascareta {{ true }}</p>
-        <p>Pisos {{ [1, 2, 3] }}</p>
-        <p>Usuario {{ { id: 1, name: 'Marc' } }}</p>
-        <p>Ets major d'edat? {{ 23 > 18 }}</p>
-    `	
-})
+    `,	
+    setup(){
+        const message = "Hola Món"; //L'element queda per defecte protegit
+    }
+});
 
 app.mount('#myApp');
