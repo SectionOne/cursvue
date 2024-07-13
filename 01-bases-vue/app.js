@@ -6,7 +6,12 @@ const app = createApp({
         <p>Desde app.js</p>
     `,	
     setup(){
-        const message = "Hola Món"; //L'element queda per defecte protegit
+        const message = ref("Hola Món"); //L'element queda per defecte protegit
+
+        setTimeout(() => {
+            message.value = "Hola Vue";
+            console.log("Executat");
+        }, 2000);
 
         return { message };
     }
