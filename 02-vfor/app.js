@@ -12,7 +12,12 @@ const app = createApp({
             {id: 4, name: 'Cristiano',number: 7},
             {id: 5, name: 'Neymar',number: 4}
         ]);
-        return {players, showPlayer};
+
+        const afegirJugador = () => {
+            players.value.push({id: players.value.length + 1, name: 'Frase',number: 0})
+        }
+
+        return {players, showPlayer, afegirJugador};
     }    
 });
 app.mount('#myApp');

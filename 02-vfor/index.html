@@ -9,6 +9,7 @@
     <div id="myApp">
         <h1>Ranking de jugadors</h1>
         <button v-on:click="showPlayer = !showPlayer">Veure Jugadors</button>
+        <button v-on:click="afegirJugador">Afegir Jugador</button>
         <hr>
         <ul>
             <li v-for="({number,name},index) in players">
