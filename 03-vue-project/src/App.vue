@@ -6,3 +6,9 @@
 <script lang="ts" setup>
 console.log("Executat");
 </script>
+
+<style>
+h1 {
+    color: red;
+}
+</style>
