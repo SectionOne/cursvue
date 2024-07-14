@@ -12,7 +12,7 @@
         <ul>
             <li v-for="({number,name},index) in players">
                 <span>{{index}} - Posició:{{number}}</span>
-                <blockquote>{{name}}</blockquote>
+                <blockquote v-if="showPlayer">{{name}}</blockquote>
             </li>
         </ul>
     </div>
