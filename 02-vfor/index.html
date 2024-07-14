@@ -10,8 +10,8 @@
         <h1>Ranking de jugadors</h1>
         <hr>
         <ul>
-            <li v-for="{number,name} in players">
-                <span>Posició:{{number}}</span>
+            <li v-for="({number,name},index) in players">
+                <span>{{index}} - Posició:{{number}}</span>
                 <blockquote>{{name}}</blockquote>
             </li>
         </ul>
