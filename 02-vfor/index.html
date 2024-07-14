@@ -9,12 +9,18 @@
     <div id="myApp">
         <h1>Ranking de jugadors</h1>
         <button v-on:click="showPlayer = !showPlayer">Veure Jugadors</button>
-        <input 
+        <h2>Nou Jugador</h2>
+        Nom Jugador: <input 
             type="text" 
             placeholder="Afegir Jugador"
             @keypress.enter="afegirJugador"
             v-model="nouJugador"
         >
+        Nombre: <input 
+            type="number"
+            @keypress.enter="afegirJugador"
+            v-model="nouJugadorNumber">
+        <br>
         Total de jugadors: {{totalJugadors}}
         <hr>
         <ul>

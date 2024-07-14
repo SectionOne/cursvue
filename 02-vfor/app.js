@@ -5,6 +5,7 @@ const app = createApp({
 
         const showPlayer = ref(true);
         const nouJugador = ref('');
+        const nouJugadorNumber = ref(0);
 
         const players = ref([
             {id: 1, name: 'Rafael',number: 10},
@@ -15,7 +16,7 @@ const app = createApp({
         ]);
 
         const afegirJugador = () => {
-            players.value.push({id: players.value.length + 1, name: nouJugador.value,number: 0})
+            players.value.push({id: players.value.length + 1, name: nouJugador.value,number: nouJugadorNumber.value})
         }
 
         //Afegim una propietat computada per a mostrar el total de jugadors i obligar a Vue a renderitzar de nou
@@ -23,7 +24,7 @@ const app = createApp({
             return players.value.length;
         });
 
-        return {players, showPlayer, afegirJugador,totalJugadors,nouJugador};
+        return {players, showPlayer, afegirJugador,totalJugadors,nouJugador,nouJugadorNumber};
     }    
 });
 app.mount('#myApp');
