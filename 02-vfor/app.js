@@ -1,4 +1,4 @@
-const {createApp, ref} = Vue;
+const {createApp, ref,computed} = Vue;
 
 const app = createApp({
     setup(){
@@ -17,7 +17,12 @@ const app = createApp({
             players.value.push({id: players.value.length + 1, name: 'Frase',number: 0})
         }
 
-        return {players, showPlayer, afegirJugador};
+        //Afegim una propietat computada per a mostrar el total de jugadors i obligar a Vue a renderitzar de nou
+        const totalJugadors = computed(() => {
+            return players.value.length;
+        });
+
+        return {players, showPlayer, afegirJugador,totalJugadors};
     }    
 });
 app.mount('#myApp');

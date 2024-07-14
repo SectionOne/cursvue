@@ -10,6 +10,7 @@
         <h1>Ranking de jugadors</h1>
         <button v-on:click="showPlayer = !showPlayer">Veure Jugadors</button>
         <button v-on:click="afegirJugador">Afegir Jugador</button>
+        Total de jugadors: {{totalJugadors}}
         <hr>
         <ul>
             <li v-for="({number,name},index) in players">
