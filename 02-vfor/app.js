@@ -17,6 +17,8 @@ const app = createApp({
 
         const afegirJugador = () => {
             players.value.push({id: players.value.length + 1, name: nouJugador.value,number: nouJugadorNumber.value})
+            nouJugador.value = '';
+            nouJugadorNumber.value = 0;
         }
 
         //Afegim una propietat computada per a mostrar el total de jugadors i obligar a Vue a renderitzar de nou
