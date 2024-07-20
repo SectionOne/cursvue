@@ -16,6 +16,18 @@ const router = createRouter({
       //Aixi carregarem de forma dinamica la pàgina segons demanda i no importada si o si desde l'inici
       component: () => import('../moduls/landing/pagines/CaracteristiquesPage.vue'),
     },
+    {
+      path: '/preus',
+      name: 'Preus', //Nom de la ruta
+      //Aixi carregarem de forma dinamica la pàgina segons demanda i no importada si o si desde l'inici
+      component: () => import('../moduls/landing/pagines/PreusPage.vue'),
+    },
+    {
+      path: '/contacte',
+      name: 'Contacte', //Nom de la ruta
+      //Aixi carregarem de forma dinamica la pàgina segons demanda i no importada si o si desde l'inici
+      component: () => import('../moduls/landing/pagines/ContactPage.vue'),
+    },
   ],
 });
 
