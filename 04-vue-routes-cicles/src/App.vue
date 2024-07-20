@@ -1,6 +1,11 @@
 <template>
-  <PrincipalPage />
+  <nav>
+
+  </nav>
+  <main class="bg-slate-100" >
+    <RouterView />
+  </main>
 </template>
 <script lang="ts" setup>
-import PrincipalPage from './moduls/landing/pagines/PrincipalPage.vue';
+
 </script>
