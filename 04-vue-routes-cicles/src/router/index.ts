@@ -10,6 +10,12 @@ const router = createRouter({
       name: 'Inici', //Nom de la ruta
       component: PaginaPrincipal,
     },
+    {
+      path: '/caracteristiques',
+      name: 'Caracteristiques', //Nom de la ruta
+      //Aixi carregarem de forma dinamica la pàgina segons demanda i no importada si o si desde l'inici
+      component: () => import('../moduls/landing/pagines/CaracteristiquesPage.vue'),
+    },
   ],
 });
 
