@@ -4,29 +4,46 @@ const router = createRouter({
   //Coneixer quines son les pagines anterior i tenir un historial de navegacions
   history: createWebHistory(import.meta.env.BASE_URL), //Recuperem la variable d'entorn BASE_URL a on es troba la base de la nostre aplicació
   routes: [
-    //Definim les diferents routes accesibles
+    //Ruta pare
     {
       path: '/',
-      name: 'Inici', //Nom de la ruta
-      component: PaginaPrincipal,
-    },
-    {
-      path: '/caracteristiques',
-      name: 'Caracteristiques', //Nom de la ruta
+      name: 'Principal', //Nom de la ruta
       //Aixi carregarem de forma dinamica la pàgina segons demanda i no importada si o si desde l'inici
-      component: () => import('../moduls/landing/pagines/CaracteristiquesPage.vue'),
+      component: () => import('../moduls/landing/layouts/LandingLayout.vue'),
+      children: [
+        //Definim les diferents routes accesibles
+        {
+          path: '/',
+          name: 'Inici', //Nom de la ruta
+          component: PaginaPrincipal,
+        },
+        {
+          path: '/caracteristiques',
+          name: 'Caracteristiques', //Nom de la ruta
+          //Aixi carregarem de forma dinamica la pàgina segons demanda i no importada si o si desde l'inici
+          component: () => import('../moduls/landing/pagines/CaracteristiquesPage.vue'),
+        },
+        {
+          path: '/preus',
+          name: 'Preus', //Nom de la ruta
+          //Aixi carregarem de forma dinamica la pàgina segons demanda i no importada si o si desde l'inici
+          component: () => import('../moduls/landing/pagines/PreusPage.vue'),
+        },
+        {
+          path: '/contacte',
+          name: 'Contacte', //Nom de la ruta
+          //Aixi carregarem de forma dinamica la pàgina segons demanda i no importada si o si desde l'inici
+          component: () => import('../moduls/landing/pagines/ContactPage.vue'),
+        },
+      ],
     },
+
+    //Auth
     {
-      path: '/preus',
-      name: 'Preus', //Nom de la ruta
+      path: '/auth',
+      name: 'Login', //Nom de la ruta
       //Aixi carregarem de forma dinamica la pàgina segons demanda i no importada si o si desde l'inici
-      component: () => import('../moduls/landing/pagines/PreusPage.vue'),
-    },
-    {
-      path: '/contacte',
-      name: 'Contacte', //Nom de la ruta
-      //Aixi carregarem de forma dinamica la pàgina segons demanda i no importada si o si desde l'inici
-      component: () => import('../moduls/landing/pagines/ContactPage.vue'),
+      component: () => import('../moduls/auth/pagines/LoginPage.vue'),
     },
   ],
 });
