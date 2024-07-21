@@ -61,6 +61,14 @@ const router = createRouter({
         },
       ],
     },
+
+    //404
+    {
+      path: '/:pathMatch(.*)*', //404
+      name: 'NotFound', //Nom de la ruta
+      //Aixi carregarem de forma dinamica la pàgina segons demanda i no importada si o si desde l'inici
+      component: () => import('../moduls/common/pagines/NotFoundPage.vue'),
+    },
   ],
 });
 
