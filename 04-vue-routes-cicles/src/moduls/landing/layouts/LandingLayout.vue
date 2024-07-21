@@ -12,10 +12,15 @@ import { RouterView } from 'vue-router';
         </a>
       </div>
     <nav class="ml-auto space-x-4 flex items-center h-10 sm:space-x-6">
-      <RouterLink to="/" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Principal</RouterLink>
-      <RouterLink to="/caracteristiques" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Caracteristiques</RouterLink>
-      <RouterLink to="/preus" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Preus</RouterLink>
-      <RouterLink to="/contacte" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Contacte</RouterLink>
+        <div>
+            <RouterLink to="/" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Principal</RouterLink>
+            <RouterLink to="/caracteristiques" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Caracteristiques</RouterLink>
+            <RouterLink to="/preus" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Preus</RouterLink>
+            <RouterLink to="/contacte" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Contacte</RouterLink>
+        </div>
+        <div>
+            <RouterLink to="/login" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Accedeix</RouterLink>
+        </div>
     </nav>
   </header>
     <!-- Fin Header -->
