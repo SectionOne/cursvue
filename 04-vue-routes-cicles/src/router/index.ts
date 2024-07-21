@@ -39,6 +39,7 @@ const router = createRouter({
           path: '/cursos/:id',
           name: 'Cursos', //Nom de la ruta
           //Aixi carregarem de forma dinamica la pàgina segons demanda i no importada si o si desde l'inici
+          props: true,
           component: () => import('../moduls/cursos/pagines/CursosPage.vue'),
         },
       ],
