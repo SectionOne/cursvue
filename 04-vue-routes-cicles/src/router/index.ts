@@ -41,6 +41,7 @@ const router = createRouter({
     //Auth
     {
       path: '/auth',
+      redirect: '/auth/login',
       name: 'Login', //Nom de la ruta
       //Aixi carregarem de forma dinamica la pàgina segons demanda i no importada si o si desde l'inici
       component: () => import('../moduls/auth/layouts/AuthLayout.vue'),
