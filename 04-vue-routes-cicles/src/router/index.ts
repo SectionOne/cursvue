@@ -48,13 +48,13 @@ const router = createRouter({
       children: [
         //Definim les diferents routes accesibles
         {
-          path: '/auth/login',
+          path: '/login',
           name: 'Iniciar Sessió', //Nom de la ruta
           //Aixi carregarem de forma dinamica la pàgina segons demanda i no importada si o si desde l'inici
           component: () => import('../moduls/auth/pagines/LoginPage.vue'),
         },
         {
-          path: '/auth/register',
+          path: '/register',
           name: 'Registre', //Nom de la ruta
           //Aixi carregarem de forma dinamica la pàgina segons demanda i no importada si o si desde l'inici
           component: () => import('../moduls/auth/pagines/RegisterPage.vue'),
