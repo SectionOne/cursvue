@@ -19,6 +19,7 @@ import { RouterView } from 'vue-router';
             <RouterLink to="/contacte" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Contacte</RouterLink>
         </div>
         <div>
+            <RouterLink to="/cursos/1" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Cursos</RouterLink>
             <RouterLink to="/login" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Accedeix</RouterLink>
         </div>
     </nav>
